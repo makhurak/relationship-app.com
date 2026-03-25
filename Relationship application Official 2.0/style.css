@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+section {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+h2 {
+    color: #ff4d6d;
+}
+ul {
+    line-height: 1.8;
+}
+.timer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, select, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.socials {
+    text-align: center;
+}
+.socials a {
+    margin: 0 10px;
+    font-size: 22px;
+    text-decoration: none;
+}
+i {
+  font-size: 30px;
+  color: #000;
+  margin: 10px;
+}
+
+i:hover {
+  color: #007bff;
+}
+
+footer {
+    text-align: center;
+    background: #222;
+    color: gold;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.valentine-hero {
+  background-image: url("https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlydGhkYXklMjBnaWZ0c3xlbnwwfHwwfHx8MA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.valentine-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.funny-text {
+  font-size: 1.2rem;
+  background: rgba(255, 0, 100, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    height: 300px;
+    background-image: url("https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJpcnRoZGF5fGVufDB8fDB8fHww");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+}
+
+.funny {
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.official {
+    margin-top: 8px;
+}
+
+.joke {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #ffb6c1;
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .hero{
+        height: 220px;
+    }
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .funny {
+        font-size: 0.9rem;
+    }
+}

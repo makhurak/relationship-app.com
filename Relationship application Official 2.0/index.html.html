@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relationship Applications 💘</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+
+<header class="hero">
+    <audio id="bgMusic" loop>
+        <source src="Partnerer-song.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="overlay" onclick="playMusic()">
+        <h1>Relationship Applications 💘</h1>
+        <p class="funny">Motho ge a sao tsebe a kao ja ka “Nama” a hwa! 😂</p>
+        <p class="official">Official Application Portal – birthday Special ❤️</p>
+        <p class="joke">Tap anywhere to start love music 🎶😆</p>
+    </div>
+</header>
+
+
+
+<section>
+    <h2>🚨 Important Notice</h2>
+    <p>
+        Applications are <strong>OPEN</strong> 😌  
+        Drink water 💧, brush teeth 😁 and behave.
+        </p><br>  
+          <ul>
+            <li>“If you’re single on Birthday… this form is your last hope 😭❤️”</li>
+            <li>“No refunds after falling in love 💔➡️❤️”</li>
+            <li>“Apply now before your crush says ‘I see you as a friend’ 😭”</li>
+            <li>“Birthday loading… Please be honest 😌💘”</li>
+
+          </ul>
+    
+</section>
+
+<section>
+    <h2>⏳ Birthday Countdown</h2>
+    <p class="timer" id="countdown"></p>
+</section>
+
+<section class="valentine-hero">
+  <div class="hero-content">
+    <h1>❤️ Birthday Special ❤️</h1>
+    <p class="funny-text">
+      Warning ⚠️<br>
+      Filling this form may cause:
+      <br>• Butterflies 🦋
+      <br>• Smiling at your phone 😁
+      <br>• Serious feelings 💍
+    </p>
+  </div>
+</section>
+
+<section>
+    <h2>⚠️ Minimum Requirements</h2>
+    <ul>
+        <li>💧 Love language: Quality Water (O tsebe o hlapa)</li>
+        <li>😁 Quality teeth only</li>
+        <li>🚫 No vat en sit history</li>
+        <li>☕ No Morning After Pill</li>
+        <li>🕊️ Peaceful human only</li>
+    </ul>
+</section>
+
+<section>
+    <h2>📝 Application Form</h2>
+<form>
+
+   <label>Full Name</label>
+    <input type="text" id="name" placeholder="Full Name" required>
+
+     <label>Age</label>
+    <input type="number" id="age" placeholder="Age" required>
+
+    <label>Gender</label>
+    <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+
+    <label>Address "O tswa kae gae"?</label>
+    <input type="text" placeholder="O dula kae?" required>
+
+    <label>Phone Number</label>
+    <input type="tel" id="phone" placeholder="Number yao e reng" required>
+
+   <label>Why should we consider you?</label>
+    <textarea id="reason" placeholder="Hlalosa ka botswerere ngwanyana waka." rows="4"></textarea>
+
+    <button onclick="sendToWhatsApp()">Submit via WhatsApp 💘</button>
+</form>
+</section>
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var gender = document.getElementById("gender").value;
+    var phone = document.getElementById("phone").value;
+    var reason = document.getElementById("reason").value;
+
+    var whatsappNumber = "27780144009"; // ← CHANGE THIS
+
+    var message =
+        "📄 *New Application* %0A%0A" +
+        "*Full Name:* " + name + "%0A" +
+        "*Age:* " + age + "%0A" +
+        "*Gender:* " + gender + "%0A" +
+        "*Phone:* " + phone + "%0A%0A" +
+        "*Why consider me?* %0A" + reason;
+
+    var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+    window.open(url, "_blank");
+}
+</script>
+
+<section class="socials">
+    <h2>📱 Follow the Department</h2>
+
+    <!-- 🔧 CHANGE LINKS TO YOUR OWN -->
+   <a href="https://www.facebook.com/share/16ekpJqwNY/?mibextid=wwXIfr" target="_blank">
+  <i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://www.instagram.com/mankaytenbag?igsh=dDdkeXVwNXA0cXpu&utm_source=qr" target="_blank">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://twitter.com" target="_blank">
+  <i class="fab fa-twitter"></i>
+</a>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Relationship Department 😂 <br>
+      Peace • Hygiene • Hydration 💧<br>
+      Developed by Mankay
+      </p>
+</footer>
+
+
+<script>
+const endDate = new Date("March 1, 2026 23:59:59").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const distance = endDate - now;
+
+    if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "⛔ Applications Closed";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("countdown").innerHTML =
+        days + " days " + hours + " hrs " + minutes + " mins remaining ⏳";
+}, 1000);
+</script>
+
+<script>
+function playMusic() {
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.4;
+    music.play();
+}
+</script>
+
+</body>
+</html>
